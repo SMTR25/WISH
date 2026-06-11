@@ -2269,3 +2269,601 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(123, 104, 238, 0.4);
 }
+
+/* ========================================
+   导航栏适配 14 项
+   ======================================== */
+.nav-menu {
+    flex-wrap: wrap;
+    gap: 0.8rem 1.5rem;
+}
+
+/* ========================================
+   唱片页
+   ======================================== */
+.disco-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.disco-card {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.disco-card:hover {
+    transform: translateY(-4px);
+}
+
+.disco-cover {
+    height: 200px;
+    overflow: hidden;
+}
+
+.disco-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.disco-info {
+    padding: 1.5rem;
+}
+
+.disco-type {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.disco-info h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin: 0.5rem 0;
+}
+
+.disco-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.disco-tracks {
+    list-style: decimal;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 2;
+}
+
+/* ========================================
+   时间线
+   ======================================== */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -2.5rem;
+    top: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.timeline-content h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin: 0.3rem 0;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   成就页
+   ======================================== */
+.achieve-section {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.achieve-category {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.achieve-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.achieve-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.achieve-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.achieve-milestones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.achieve-mile {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9ff, #fff5f8);
+    border-radius: var(--radius);
+}
+
+.achieve-stat {
+    display: block;
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.achieve-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.3rem;
+}
+
+/* ========================================
+   粉丝测试
+   ======================================== */
+.quiz-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.quiz-progress {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.quiz-question {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: var(--radius);
+    background: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+    background: #f8f9ff;
+}
+
+.quiz-option.correct {
+    border-color: #4caf50;
+    background: #e8f5e9;
+}
+
+.quiz-option.wrong {
+    border-color: #f44336;
+    background: #fbe9e7;
+}
+
+.quiz-result {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.quiz-score {
+    font-size: 3rem;
+    font-weight: 200;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.quiz-level {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   投票页
+   ======================================== */
+.poll-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.poll-option {
+    display: grid;
+    grid-template-columns: 120px 1fr 80px;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: var(--radius);
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.poll-option:hover {
+    border-color: var(--primary-color);
+}
+
+.poll-member {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.poll-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.poll-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.poll-pct {
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.poll-total {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+/* ========================================
+   照片墙 + Lightbox
+   ======================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lightbox.show {
+    opacity: 1;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 1;
+}
+
+.lightbox-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.lightbox-info {
+    text-align: center;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.lightbox-info h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.lightbox-info p {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* ========================================
+   成员详情页
+   ======================================== */
+.member-detail-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.detail-hero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.detail-hero-img {
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.detail-hero-img img {
+    width: 100%;
+    display: block;
+}
+
+.detail-hero-info h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+    color: var(--text-primary);
+}
+
+.detail-subtitle {
+    color: var(--text-secondary);
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+}
+
+.detail-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.detail-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detail-section {
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.detail-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.detail-section p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.detail-tmi {
+    background: #fffdf5;
+    border-left: 4px solid #ffd700;
+}
+
+.recommended-video-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: background 0.2s;
+}
+
+.recommended-video-card:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+.recommended-video-card img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ========================================
+   应援打call页
+   ======================================== */
+.cheer-wrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e, #2d1b4e);
+    border: 2px solid rgba(123,104,238,0.3);
+}
+
+.cheer-wrapper canvas {
+    display: block;
+    width: 100%;
+    height: 400px;
+    cursor: crosshair;
+}
+
+/* ========================================
+   响应式 - 新模块
+   ======================================== */
+@media (max-width: 768px) {
+    .disco-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .poll-option {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achieve-milestones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-menu {
+        gap: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
