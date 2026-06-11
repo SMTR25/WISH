@@ -90,8 +90,8 @@ const membersData = [
         nameCn: "广濑辽",
         birthday: "2007.08.04",
         birthplace: "日本大阪",
-        position: "🦭",
-        emoji: "副唱",
+        position: "副唱",
+        emoji: "🦭",
         image: "images/ryo.jpg",
         themeColor: "#FFF9E6",
         traits: ["全能忙内", "可爱爆棚", "学习能力强", "潜力无限"],
@@ -231,21 +231,21 @@ const mvData = [
         link: "https://www.bilibili.com/video/BV1PktXzkE5M?spm_id_from=333.788.videopod.sections&vd_source=fe981a10e0c3d977a588102e1ae67e4f"
     },
     {
-        id: 5,
+        id: 4,
         title: "NCT WISH《Surf》MV",
         date: "2025.08.11",
         image: "images/surf.jpg",
         link: "https://www.bilibili.com/video/BV1QgoNBgEJB/?spm_id_from=333.337.search-card.all.click&vd_source=fe981a10e0c3d977a588102e1ae67e4f"
     },
     {
-        id: 6,
+        id: 5,
         title: "NCT WISH《COLOR》MV",
         date: "2025.09.01",
         image: "images/color1.jpg",
         link: "https://www.bilibili.com/video/BV1rvajzLEVQ?spm_id_from=333.788.videopod.sections&vd_source=fe981a10e0c3d977a588102e1ae67e4f"
     },
     {
-        id: 7,
+        id: 6,
         title: "NCT WISH《Ode to Love》MV",
         date: "2026.04.02",
         image: "images/ode to love.jpg",
@@ -268,7 +268,7 @@ const fanVideosData = [
         description: "综艺下饭合集",
         badge: "热门",
         image: "images/安利2.jpg",
-        link: "https://www.bilibili.com/video/example2"
+        link: "https://www.bilibili.com/video/BV1MZ4y1n7Uf/?spm_id_from=333.337.search-card.all.click&vd_source=fe981a10e0c3d977a588102e1ae67e4f"
     },
     {
         id: 3,
@@ -318,35 +318,4 @@ const fanVideosData = [
         image: "images/安利8.png",
         link: "https://www.bilibili.com/video/BV1LV8bzAEGt/?spm_id_from=333.1387.upload.video_card.click&vd_source=fe981a10e0c3d977a588102e1ae67e4f"
     }
-];
-
-const smartRecommendations = [
-    { title: "NCT WISH 最新舞台", desc: "精彩表演瞬间", badge: "NEW" },
-    { title: "成员个人直拍", desc: "专属focus镜头", badge: "HOT" },
-    { title: "幕后花絮", desc: "不为人知的故事", badge: "独家" },
-    { title: "粉丝reaction", desc: "真实情感反馈", badge: "感动" },
-    { title: "舞蹈练习室", desc: "汗水与努力", badge: "励志" },
-    { title: "采访合集", desc: "深入了解成员", badge: "深度" },
-    { title: "直播回放", desc: "错过的精彩内容", badge: "回顾" },
-    { title: "音乐作品赏析", desc: "专业解读", badge: "专业" },
-    { title: "时尚画报拍摄", desc: "视觉盛宴", badge: "美学" },
-    { title: "综艺节目集锦", desc: "欢乐时光", badge: "搞笑" }
-];
-
-const bilibiliKeywords = [
-    'NCT WISH',
-    'NCTWISH 舞台',
-    'NCT WISH 搞笑',
-    'SION 直拍',
-    'RIKU rap',
-    'YUSHI 舞蹈',
-    'JAEHEE 高音',
-    'RYO 可爱',
-    'SAKUYA 娃娃'
-];
-
-const PROXY_SERVERS = [
-    'https://api.allorigins.win/get?url=',
-    'https://api.codetabs.com/v1/proxy?uri=',
-    'https://corsproxy.io/?'
 ];

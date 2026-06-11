@@ -1600,15 +1600,6 @@ section {
     animation: float 5s ease-in-out infinite;
 }
 
-.sticker-sakura {
-    top: 12%;
-    left: 69%;
-    max-width: 90px;
-    transform: rotate(15deg);
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 1s;
-}
-
 .sticker-stars {
     top: 12%;
     right: 12%;
@@ -1642,31 +1633,6 @@ section {
     transform: rotate(10deg);
     animation: float 8s ease-in-out infinite;
     animation-delay: 1.5s;
-}
-
-.sticker-candle {
-    bottom: 25%;
-    left: 10%;
-    max-width: 60px;
-    transform: rotate(-8deg);
-    animation: flicker 4s ease-in-out infinite;
-}
-
-.sticker-ccd {
-    bottom: 20%;
-    left: 6%;
-    max-width: 95px;
-    transform: rotate(5deg);
-    animation: float 7s ease-in-out infinite;
-    animation-delay: 3s;
-}
-
-.sticker-carousel {
-    bottom: 15%;
-    right: 8%;
-    max-width: 100px;
-    transform: rotate(-6deg);
-    animation: rotate-slow 10s linear infinite;
 }
 
 /* 动画 */

@@ -6,12 +6,8 @@ let currentPhotoIndex = 0;
 let photoCarouselTrack = null;
 let photoIndicatorsNew = null;
 let photoInterval = null;
-let currentGroupTheme = 'blue';
-let currentGroupSlide = 0;
-let currentVideoPage = 0;
-const videosPerPage = 8;
-let allVideos = [...fanVideosData];
 let messagesData = JSON.parse(localStorage.getItem('nct_wish_messages')) || [];
+let allVideos = [...fanVideosData];
 
 // ========================================
 // 页面初始化（按需加载）
@@ -265,61 +261,14 @@ function renderFanVideos() {
 }
 
 // ========================================
-// B站 API（降级方案）
-// ========================================
-async function fetchBilibiliVideos(keyword, page) {
-    for (let i = 0; i < PROXY_SERVERS.length; i++) {
-        try {
-            const proxyUrl = PROXY_SERVERS[i];
-            const apiUrl = encodeURIComponent(
-                `https://api.bilibili.com/x/web-interface/search/type?keyword=${encodeURIComponent(keyword)}&page=${page}&search_type=video&page_size=8`
-            );
-            const response = await fetch(proxyUrl + apiUrl);
-            const data = await response.json();
-            if (!data.contents) continue;
-            const apiData = JSON.parse(data.contents);
-            if (!apiData.data || !apiData.data.result || apiData.data.result.length === 0) return [];
-            return apiData.data.result.slice(0, 8).map(video => ({
-                id: video.bvid,
-                title: video.title.replace(/<[^>]+>/g, '').substring(0, 50),
-                description: `${video.author || 'UP主'} · ${formatPlayCount(video.play || 0)}播放`,
-                badge: '🔥B站',
-                image: video.pic ? (video.pic.startsWith('http') ? video.pic : `https:${video.pic}`) : 'images/安利1.jpg',
-                link: `https://www.bilibili.com/video/${video.bvid}`
-            }));
-        } catch (error) {
-            if (i === PROXY_SERVERS.length - 1) return [];
-        }
-    }
-    return [];
-}
-
-function formatPlayCount(count) {
-    if (count >= 100000000) return (count / 100000000).toFixed(1) + '亿';
-    if (count >= 10000) return (count / 10000).toFixed(1) + '万';
-    return count.toString();
-}
-
-function generateSmartRecommendations() {
-    const startIndex = currentVideoPage * videosPerPage;
-    for (let i = 0; i < videosPerPage; i++) {
-        const recIndex = (startIndex + i) % smartRecommendations.length;
-        const rec = smartRecommendations[recIndex];
-        const randomImage = `images/安利${((startIndex + i) % 8) + 1}.${(startIndex + i) % 2 === 0 ? 'jpg' : 'png'}`;
-        allVideos.push({
-            id: fanVideosData.length + startIndex + i + 1,
-            title: rec.title,
-            description: rec.desc,
-            badge: rec.badge,
-            image: randomImage,
-            link: `https://www.bilibili.com/video/BV1example${startIndex + i + 1}`
-        });
-    }
-}
-
-// ========================================
 // 留言板
 // ========================================
+function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 function renderMessages() {
     const container = document.getElementById('messages-container');
     const countEl = document.getElementById('message-count');
@@ -334,13 +283,13 @@ function renderMessages() {
     container.innerHTML = sorted.map(msg => `
         <div class="message-card">
             <div class="message-header">
-                <div class="message-avatar">${msg.avatar}</div>
+                <div class="message-avatar">${escapeHtml(msg.avatar)}</div>
                 <div class="message-user">
-                    <div class="message-username">${msg.username}</div>
-                    <div class="message-time">${msg.time}</div>
+                    <div class="message-username">${escapeHtml(msg.username)}</div>
+                    <div class="message-time">${escapeHtml(msg.time)}</div>
                 </div>
             </div>
-            <p class="message-content">${msg.content}</p>
+            <p class="message-content">${escapeHtml(msg.content)}</p>
         </div>
     `).join('');
 }
@@ -412,7 +361,7 @@ function initBackToTop() {
 
 function initScrollSpy() {
     const sections = document.querySelectorAll('section[id]');
-    if (sections.length === 0) return;
+    if (sections.length <= 1) return;
     const navLinks = document.querySelectorAll('.nav-menu a');
     window.addEventListener('scroll', function () {
         let current = '';
