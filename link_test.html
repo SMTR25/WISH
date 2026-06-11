@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链接测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        .test-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .link-test {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 0.5rem;
+        }
+        .link-test:hover {
+            opacity: 0.9;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔗 B站链接测试</h1>
+    
+    <div class="test-box">
+        <h2>测试1: 原始URL (有问题)</h2>
+        <p>URL: <code>https://www.bilibili.com/video/BV15UgWzPEpD/?share_source=copy_web&vd_source=d2512552f54bc0abc8b48fd1d1517e63</code></p>
+        <a href="https://www.bilibili.com/video/BV15UgWzPEpD/?share_source=copy_web&vd_source=d2512552f54bc0abc8b48fd1d1517e63" target="_blank" class="link-test">
+            点击测试 (原始URL)
+        </a>
+        <div class="result error">
+            ❌ 这个可能无法正常工作,因为 <code>&</code> 没有被转义
+        </div>
+    </div>
+    
+    <div class="test-box">
+        <h2>测试2: 转义后的URL (正确)</h2>
+        <p>URL: <code>https://www.bilibili.com/video/BV15UgWzPEpD/?share_source=copy_web&amp;vd_source=d2512552f54bc0abc8b48fd1d1517e63</code></p>
+        <a href="https://www.bilibili.com/video/BV15UgWzPEpD/?share_source=copy_web&amp;vd_source=d2512552f54bc0abc8b48fd1d1517e63" target="_blank" class="link-test">
+            点击测试 (转义后)
+        </a>
+        <div class="result success">
+            ✅ 这个应该可以正常工作!
+        </div>
+    </div>
+    
+    <div class="test-box">
+        <h2>JavaScript 自动转义测试</h2>
+        <p>使用 <code>.replace(/&/g, '&amp;amp;')</code> 方法:</p>
+        <div id="js-result"></div>
+    </div>
+    
+    <script>
+        // 模拟原始URL
+        const originalUrl = "https://www.bilibili.com/video/BV15UgWzPEpD/?share_source=copy_web&vd_source=d2512552f54bc0abc8b48fd1d1517e63";
+        
+        // 转义处理
+        const escapedUrl = originalUrl.replace(/&/g, '&amp;');
+        
+        // 显示结果
+        const resultDiv = document.getElementById('js-result');
+        resultDiv.innerHTML = `
+            <p><strong>原始URL:</strong><br><code>${originalUrl}</code></p>
+            <p><strong>转义后URL:</strong><br><code>${escapedUrl}</code></p>
+            <a href="${escapedUrl}" target="_blank" class="link-test">
+                点击测试 (JS转义)
+            </a>
+            <div class="result success">
+                ✅ JavaScript自动转义后应该可以正常工作!
+            </div>
+        `;
+        
+        console.log('原始URL:', originalUrl);
+        console.log('转义后URL:', escapedUrl);
+    </script>
+</body>
+</html>
