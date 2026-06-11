@@ -1600,15 +1600,6 @@ section {
     animation: float 5s ease-in-out infinite;
 }
 
-.sticker-sakura {
-    top: 12%;
-    left: 69%;
-    max-width: 90px;
-    transform: rotate(15deg);
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 1s;
-}
-
 .sticker-stars {
     top: 12%;
     right: 12%;
@@ -1642,31 +1633,6 @@ section {
     transform: rotate(10deg);
     animation: float 8s ease-in-out infinite;
     animation-delay: 1.5s;
-}
-
-.sticker-candle {
-    bottom: 25%;
-    left: 10%;
-    max-width: 60px;
-    transform: rotate(-8deg);
-    animation: flicker 4s ease-in-out infinite;
-}
-
-.sticker-ccd {
-    bottom: 20%;
-    left: 6%;
-    max-width: 95px;
-    transform: rotate(5deg);
-    animation: float 7s ease-in-out infinite;
-    animation-delay: 3s;
-}
-
-.sticker-carousel {
-    bottom: 15%;
-    right: 8%;
-    max-width: 100px;
-    transform: rotate(-6deg);
-    animation: rotate-slow 10s linear infinite;
 }
 
 /* 动画 */
@@ -2256,4 +2222,50 @@ section {
     .stat-number {
         font-size: 2rem;
     }
+}
+
+/* ========================================
+   多页面：子页面顶部 hero
+   ======================================== */
+.page-hero {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+}
+
+.page-hero .section-title {
+    font-size: 2.5rem;
+}
+
+/* ========================================
+   回到顶部按钮
+   ======================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(123, 104, 238, 0.3);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(123, 104, 238, 0.4);
 }
