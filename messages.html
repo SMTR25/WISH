@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="NCT WISH 粉丝留言板 - 写下你对NCT WISH的祝福与支持">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>留言板 - NCT WISH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="messages">
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration:none;"><h1>NCT WISH</h1></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-page="home" class="nav-link">首页</a></li>
+                <li><a href="members.html" data-page="members" class="nav-link">成员</a></li>
+                <li><a href="merchandise.html" data-page="merchandise" class="nav-link">周边</a></li>
+                <li><a href="stage.html" data-page="stage" class="nav-link">舞台欣赏</a></li>
+                <li><a href="mv.html" data-page="mv" class="nav-link">MV作品</a></li>
+                <li><a href="fanvideos.html" data-page="fanvideos" class="nav-link">安利视频</a></li>
+                <li><a href="messages.html" data-page="messages" class="nav-link">留言板</a></li>
+            </ul>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2 class="section-title">留言板</h2>
+            <p class="section-desc">Leave Your Wishes</p>
+        </div>
+    </section>
+
+    <section id="messages" class="messages-section">
+        <div class="container">
+            <div class="message-form-container">
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="fan-name">你的昵称</label>
+                        <input type="text" id="fan-name" placeholder="请输入昵称" required maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-content">想说的话</label>
+                        <textarea id="message-content" placeholder="写下你对NCT WISH的祝福..." rows="5" required maxlength="500"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">发布留言</button>
+                </form>
+            </div>
+            <div class="message-stats-bar">
+                共 <strong id="message-count">0</strong> 条留言
+            </div>
+            <div class="messages-grid" id="messages-container"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand"><p>NCT WISH Fan Site</p></div>
+            <p class="footer-info">Made with 💚 for NCT WISH</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

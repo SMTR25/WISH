@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="NCT WISH 官方粉丝网站 - 成员介绍、MV作品、舞台表演、官方周边、粉丝留言板">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <title>NCT WISH - Official Fan Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- 导航栏 -->
+<body data-page="home">
+
     <nav class="navbar">
         <div class="container nav-container">
             <div class="nav-brand">
-                <h1>NCT WISH</h1>
+                <a href="index.html" style="text-decoration:none;"><h1>NCT WISH</h1></a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">首页</a></li>
-                <li><a href="#members" class="nav-link">成员</a></li>
-                <li><a href="#merchandise" class="nav-link">周边</a></li>
-                <li><a href="#stage" class="nav-link">舞台欣赏</a></li>
-                <li><a href="#mv" class="nav-link">MV作品</a></li>
-                <li><a href="#fanvideos" class="nav-link">安利视频</a></li>
-                <li><a href="#messages" class="nav-link">留言板</a></li>
+                <li><a href="index.html" data-page="home" class="nav-link">首页</a></li>
+                <li><a href="members.html" data-page="members" class="nav-link">成员</a></li>
+                <li><a href="merchandise.html" data-page="merchandise" class="nav-link">周边</a></li>
+                <li><a href="stage.html" data-page="stage" class="nav-link">舞台欣赏</a></li>
+                <li><a href="mv.html" data-page="mv" class="nav-link">MV作品</a></li>
+                <li><a href="fanvideos.html" data-page="fanvideos" class="nav-link">安利视频</a></li>
+                <li><a href="messages.html" data-page="messages" class="nav-link">留言板</a></li>
             </ul>
             <div class="mobile-menu-btn">☰</div>
         </div>
@@ -32,11 +31,11 @@
     <!-- 首页横幅 -->
     <section id="home" class="hero">
         <div class="collage-decorations">
-            <img src="images/collage1.jpg" alt="" class="collage-item collage-1">
-            <img src="images/collage2.jpg" alt="" class="collage-item collage-2">
-            <img src="images/collage3.jpg" alt="" class="collage-item collage-3">
-            <img src="images/collage4.jpg" alt="" class="collage-item collage-4">
-            <img src="images/collage5.jpg" alt="" class="collage-item collage-5">
+            <img src="images/collage1.jpg" alt="" class="collage-item collage-1" loading="lazy">
+            <img src="images/collage2.jpg" alt="" class="collage-item collage-2" loading="lazy">
+            <img src="images/collage3.jpg" alt="" class="collage-item collage-3" loading="lazy">
+            <img src="images/collage4.jpg" alt="" class="collage-item collage-4" loading="lazy">
+            <img src="images/collage5.jpg" alt="" class="collage-item collage-5" loading="lazy">
         </div>
         <div class="hero-content">
             <h2 class="hero-title">NCT WISH</h2>
@@ -58,62 +57,44 @@
         </div>
     </section>
 
-    <!-- 团体美照 -->
     <!-- 团体介绍 -->
     <section id="group" class="group-section">
         <div class="container">
             <h2 class="section-title">GROUP</h2>
             <p class="section-desc">NCT WISH Introduction</p>
-            
+
             <div class="group-intro-layout">
-                <!-- 左侧：团体介绍 -->
                 <div class="group-intro-left">
                     <div class="group-intro-card">
                         <div class="group-logo">
-                            <img src="images/wish.jpg" alt="NCT WISH Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>NCT WISH</div>';">
+                            <img src="images/wish.jpg" alt="NCT WISH Logo" loading="lazy"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>NCT WISH</div>';">
                         </div>
                         <h3 class="group-name">NCT WISH</h3>
                         <p class="group-debut">Debut: 2024.02.21</p>
                         <div class="group-description">
                             <p>NCT WISH是SM娱乐旗下男子演唱组合NCT的日本分队，由6名成员组成：SION、RIKU、YUSHI、JAEHEE、RYO、SAKUYA。</p>
-                            <p>组合名称“WISH”寓意着“希望”，代表着6位成员将为粉丝带来希望和梦想的美好愿望。</p>
+                            <p>组合名称"WISH"寓意着"希望"，代表着6位成员将为粉丝带来希望和梦想的美好愿望。</p>
                             <p>他们以青春活力的形象和出色的舞台表现力，在全球范围内收获了大量粉丝的喜爱与支持。</p>
                         </div>
                         <div class="group-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">6</span>
-                                <span class="stat-label">成员</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">2024</span>
-                                <span class="stat-label">出道年份</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">SM</span>
-                                <span class="stat-label">所属公司</span>
-                            </div>
+                            <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">成员</span></div>
+                            <div class="stat-item"><span class="stat-number">2024</span><span class="stat-label">出道年份</span></div>
+                            <div class="stat-item"><span class="stat-number">SM</span><span class="stat-label">所属公司</span></div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- 右侧：照片轮播 -->
+
                 <div class="group-intro-right">
                     <div class="photo-carousel" id="photo-carousel">
-                        <div class="photo-carousel-track" id="photo-carousel-track">
-                            <!-- JS动态渲染照片 -->
-                        </div>
-                                        
-                        <!-- 控制按钮 -->
+                        <div class="photo-carousel-track" id="photo-carousel-track"></div>
                         <div class="carousel-controls">
                             <button class="carousel-btn" id="carousel-prev">❮</button>
                             <button class="carousel-btn" id="carousel-next">❯</button>
                         </div>
-                                        
-                        <!-- 指示器 -->
                         <div class="carousel-indicators-new" id="carousel-indicators-new"></div>
                     </div>
-                                    
-                    <!-- WISH概念介绍 -->
+
                     <div class="wish-concept-box">
                         <h4 class="concept-title">WISH概念解读</h4>
                         <p class="concept-content">WISH是NCT迈向新时代的梦幻窗口。星星、翅膀与糖果色，爱、希望与温暖，相对于NCT之前宏大晦涩的概念，WISH的概念显得轻盈又亲近。后疫情时代到来以后，KPOP也迎来了属于这个产业的新时代。因为精神负载过重，理解天方夜谭的概念成本太高，大家都开始追求更加贴近生活的精神产品，向往无法触手可得的爱、自由，渴望能拥有一个温暖的出口。相较于127的先锋实验，威神V的神秘宏大，Dream的青春伤痛，WISH是NCT与时俱进的梦幻窗口，你不切实际的愿望似乎都可以在这里被实现。</p>
@@ -124,121 +105,17 @@
         </div>
     </section>
 
-    <!-- 成员介绍 -->
-    <section id="members" class="members-section">
-        <div class="container">
-            <h2 class="section-title">成员介绍</h2>
-            <p class="section-desc">Meet Our Members</p>
-            <div class="members-detailed-container" id="members-container"></div>
-        </div>
-    </section>
-
-    <!-- 周边商品 -->
-    <section id="merchandise" class="merchandise-section">
-        <div class="container">
-            <h2 class="section-title">官方周边</h2>
-            <p class="section-desc">Official Merchandise</p>
-            <div class="merchandise-grid" id="merchandise-container"></div>
-        </div>
-    </section>
-
-    <!-- 舞台欣赏 -->
-    <section id="stage" class="stage-section">
-        <div class="container">
-            <h2 class="section-title">舞台欣赏</h2>
-            <p class="section-desc">Stage Performance</p>
-            
-            <!-- 视频播放器 - B站外部嵌入 -->
-            <div class="video-player-wrapper">
-                <iframe 
-                    src="https://player.bilibili.com/player.html?bvid=BV12Sx4eyEG6&page=1&autoplay=0&high_quality=1" 
-                    scrolling="no" 
-                    border="0" 
-                    frameborder="no" 
-                    framespacing="0" 
-                    allowfullscreen="true"
-                    style="width: 100%; height: 562px; max-width: 100%;">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- MV作品 -->
-    <section id="mv" class="mv-section">
-        <!-- 装饰层 -->
-        <div class="mv-decorations">
-            <!-- 线条装饰 -->
-            <div class="deco-line deco-line-1"></div>
-            <div class="deco-line deco-line-2"></div>
-            <!-- 虚线框 -->
-            <div class="deco-dashed-box"></div>
-            <!-- 贴纸装饰 -->
-            <img src="images/sticker-bow.png" alt="" class="mv-sticker sticker-bow">
-            <img src="images/sticker-sakura.png" alt="" class="mv-sticker sticker-sakura">
-            <img src="images/sticker-stars.png" alt="" class="mv-sticker sticker-stars">
-            <img src="images/sticker-camera.png" alt="" class="mv-sticker sticker-camera">
-            <img src="images/sticker-phone.png" alt="" class="mv-sticker sticker-phone">
-            <img src="images/sticker-guitar.png" alt="" class="mv-sticker sticker-guitar">
-            <img src="images/sticker-candle.png" alt="" class="mv-sticker sticker-candle">
-            <img src="images/sticker-ccd.png" alt="" class="mv-sticker sticker-ccd">
-            <img src="images/sticker-carousel.png" alt="" class="mv-sticker sticker-carousel">
-        </div>
-        
-        <div class="container">
-            <h2 class="section-title">MV作品</h2>
-            <p class="section-desc">Music Videos</p>
-            <div class="mv-grid" id="mv-container"></div>
-        </div>
-    </section>
-
-    <!-- 安利视频 - 智能推荐瀑布流 -->
-    <section id="fanvideos" class="videos-section">
-        
-        <div class="container">
-            <h2 class="section-title">安利视频</h2>
-            <p class="section-desc">Smart Recommendations</p>
-            <div class="videos-waterfall" id="videos-container">
-                <!-- 瀑布流内容将通过JS动态加载 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 粉丝留言 -->
-    <section id="messages" class="messages-section">
-        <div class="container">
-            <h2 class="section-title">留言板</h2>
-            <p class="section-desc">Leave Your Wishes</p>
-            <div class="message-form-container">
-                <form id="message-form">
-                    <div class="form-group">
-                        <label for="fan-name">你的昵称</label>
-                        <input type="text" id="fan-name" placeholder="请输入昵称" required maxlength="20">
-                    </div>
-                    <div class="form-group">
-                        <label for="message-content">想说的话</label>
-                        <textarea id="message-content" placeholder="写下你对NCT WISH的祝福..." rows="5" required maxlength="500"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">发布留言</button>
-                </form>
-            </div>
-            <div class="message-stats-bar">
-                共 <strong id="message-count">0</strong> 条留言
-            </div>
-            <div class="messages-grid" id="messages-container"></div>
-        </div>
-    </section>
-
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-brand">
-                <p>NCT WISH Fan Site</p>
-            </div>
+            <div class="footer-brand"><p>NCT WISH Fan Site</p></div>
             <p class="footer-info">Made with 💚 for NCT WISH</p>
         </div>
     </footer>
 
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

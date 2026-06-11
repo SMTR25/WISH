@@ -2257,3 +2257,49 @@ section {
         font-size: 2rem;
     }
 }
+
+/* ========================================
+   多页面：子页面顶部 hero
+   ======================================== */
+.page-hero {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+}
+
+.page-hero .section-title {
+    font-size: 2.5rem;
+}
+
+/* ========================================
+   回到顶部按钮
+   ======================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(123, 104, 238, 0.3);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(123, 104, 238, 0.4);
+}
